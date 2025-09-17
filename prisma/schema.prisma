@@ -75,7 +75,6 @@ model productos {
   stock               stock[]
 }
 
-
 model proveedores {
   id_proveedor        Int         @id @default(autoincrement())
   nombre              String      @db.VarChar(45)
