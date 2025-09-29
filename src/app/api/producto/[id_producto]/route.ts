@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { updateProduct } from "@/actions/actualizarProducto";
-import { deleteProduct } from "@/actions/deleteProductos"; 
+import { updateProduct} from "@/actions/actualizarProducto"
+import { deleteProduct } from "@/actions/deleteProductos";
 
 // Define un serializador personalizado para BigInt
 function replacer(key: any, value: any) {

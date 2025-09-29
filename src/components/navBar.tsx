@@ -22,7 +22,7 @@ export function NavBar() {
         </NavigationMenuLink>
         <NavigationMenuLink
           className="flex justify-center items-center flex-row hover:bg-var6/80 dark:hover:bg-var1/80 hover:rounded-md"
-          href="/inventario"
+          href="/productManagement"
         >
           <BiBox className="size-4" />
           Inventario

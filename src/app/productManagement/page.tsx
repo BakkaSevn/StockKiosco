@@ -5,10 +5,18 @@ import { useEffect, useState } from "react";
 import ProductCard from "@/components/cardProduct";
 import handleEdit from "@/components/cardProduct";
 
+interface Producto {
+  id_producto: number;
+  nombre: string;
+  descripcion: string;
+  precio: number;
+  stock: number;
+}
+
 export default function ProductManagement() {
-  const [productos, setProductos] = useState([]);
+  const [productos, setProductos] = useState<Producto[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
     const fetchProductos = async () => {
       try {
@@ -17,7 +25,7 @@ export default function ProductManagement() {
           throw new Error("Error al obtener los datos de la API");
         }
         const data = await response.json();
-        setProductos(data.body);
+        setProductos(data.body || []);
       } catch (error) {
         setError(error.message);
       } finally {

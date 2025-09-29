@@ -47,9 +47,6 @@ export default function Menu() {
   
   return (
     <main className="flex justify-start items-center h-screen flex-col p-4 gap-15">
-      <div className="w-full flex justify-center text-sm text-muted-foreground">
-        <NavBar></NavBar>
-      </div>
       <div className="max-h-fit w-fit xl:w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 justify-items-center">
         <InfoCard
           title="Inventario total"
